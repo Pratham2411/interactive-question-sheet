@@ -1,16 +1,45 @@
-# React + Vite
+# Interactive Question Management Sheet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive, single-page web application to manage a structured set of questions organized by **topics** and **subtopics**, inspired by platforms like Striver SDE Sheet and Codolio.
 
-Currently, two official plugins are available:
+The application allows users to add, edit, delete, reorder, search, and mark questions as solved, all through a clean and intuitive UI.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 📚 Topic → Subtopic → Question hierarchy
+- ➕ Add / Edit / Delete Topics, Subtopics, and Questions
+- 🔀 Drag-and-drop reordering (within topics and subtopics)
+- 🔍 Real-time search for questions
+- ✅ Mark questions as Solved / Unsolved
+- 🌙 Dark mode UI (Striver-style)
+- 🎨 Clean card-based design with subtle shadows
+- ⚡ Fast and responsive single-page app
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- **Frontend:** React (Vite)
+- **State Management:** Zustand
+- **Styling:** Tailwind CSS
+- **Drag & Drop:** dnd-kit
+- **Deployment:** Vercel
+
+---
+
+## 🧠 Design Decisions
+
+- The application is **frontend-only** and does not require authentication.
+- State is managed entirely using **Zustand** for simplicity and performance.
+- Persistence was intentionally kept out of scope to maintain deterministic behavior.
+- Drag-and-drop is supported within logical containers to ensure stability and UX clarity.
+
+---
+
+## 🚀 Getting Started (Run Locally)
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/Pratham2411/interactive-question-sheet.git
