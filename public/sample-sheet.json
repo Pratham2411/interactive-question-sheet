@@ -1,0 +1,101 @@
+{
+  "slug": "striver-style-dsa-sheet",
+  "title": "DSA Practice Sheet",
+  "topics": [
+    {
+      "id": "t1",
+      "title": "Arrays",
+      "order": 0,
+      "subtopics": [
+        {
+          "id": "st1",
+          "title": "Basics",
+          "order": 0,
+          "questions": [
+            { "id": "q1", "title": "Two Sum", "order": 0, "solved": false },
+            { "id": "q2", "title": "Maximum Subarray (Kadane)", "order": 1, "solved": false }
+          ]
+        },
+        {
+          "id": "st2",
+          "title": "Prefix Sum",
+          "order": 1,
+          "questions": [
+            { "id": "q3", "title": "Subarray Sum Equals K", "order": 0, "solved": false },
+            { "id": "q4", "title": "Range Sum Query", "order": 1, "solved": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t2",
+      "title": "Linked List",
+      "order": 1,
+      "subtopics": [
+        {
+          "id": "st3",
+          "title": "Traversal",
+          "order": 0,
+          "questions": [
+            { "id": "q5", "title": "Detect Cycle in Linked List", "order": 0, "solved": false },
+            { "id": "q6", "title": "Find Middle of Linked List", "order": 1, "solved": false }
+          ]
+        },
+        {
+          "id": "st4",
+          "title": "Reversal",
+          "order": 1,
+          "questions": [
+            { "id": "q7", "title": "Reverse Linked List", "order": 0, "solved": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t3",
+      "title": "Stacks",
+      "order": 2,
+      "subtopics": [
+        {
+          "id": "st5",
+          "title": "Monotonic Stack",
+          "order": 0,
+          "questions": [
+            { "id": "q8", "title": "Next Greater Element", "order": 0, "solved": false },
+            { "id": "q9", "title": "Largest Rectangle in Histogram", "order": 1, "solved": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t4",
+      "title": "Recursion & Backtracking",
+      "order": 3,
+      "subtopics": [
+        {
+          "id": "st6",
+          "title": "Basic Recursion",
+          "order": 0,
+          "questions": [
+            { "id": "q10", "title": "Print All Subsequences", "order": 0, "solved": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "t5",
+      "title": "Binary Search",
+      "order": 4,
+      "subtopics": [
+        {
+          "id": "st7",
+          "title": "Search Space",
+          "order": 0,
+          "questions": [
+            { "id": "q11", "title": "Binary Search on Answer", "order": 0, "solved": false }
+          ]
+        }
+      ]
+    }
+  ]
+}
