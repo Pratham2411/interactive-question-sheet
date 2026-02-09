@@ -25,7 +25,7 @@ export default function SubTopic({ subtopic, topicId }) {
     transition,
   } = useSortable({ id: subtopic.id });
 
-  // ✅ VISUAL FILTER ONLY
+  // 🔍 SEARCH FILTER (VISUAL ONLY)
   const visibleQuestions = subtopic.questions.filter(q =>
     q.title.toLowerCase().includes(search.toLowerCase())
   );
@@ -84,16 +84,17 @@ export default function SubTopic({ subtopic, topicId }) {
       {/* QUESTIONS */}
       <DndContext
         collisionDetection={closestCenter}
-        onDragEnd={(e) =>
+        onDragEnd={(e) => {
+          if (!e.over || e.active.id === e.over.id) return;
+
           reorderQuestions(
             topicId,
             subtopic.id,
             e.active.id,
-            e.over?.id
-          )
-        }
+            e.over.id
+          );
+        }}
       >
-        {/* ✅ IMPORTANT: FULL LIST HERE */}
         <SortableContext
           items={subtopic.questions.map(q => q.id)}
           strategy={verticalListSortingStrategy}
