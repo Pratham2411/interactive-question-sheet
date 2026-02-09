@@ -13,7 +13,7 @@ The application allows users to add, edit, delete, reorder, search, and mark que
 - 🔀 Drag-and-drop reordering (within topics and subtopics)
 - 🔍 Real-time search for questions
 - ✅ Mark questions as Solved / Unsolved
-- 🌙 Dark mode UI (Striver-style)
+- 🌙 Dark mode UI 
 - 🎨 Clean card-based design with subtle shadows
 - ⚡ Fast and responsive single-page app
 
