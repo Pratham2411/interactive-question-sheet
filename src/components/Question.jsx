@@ -3,7 +3,7 @@ import { CSS } from "@dnd-kit/utilities";
 import { useSheetStore } from "../store/sheetStore";
 
 export default function Question({ question, topicId, subTopicId }) {
-  const toggleSolved = useSheetStore(s => s.toggleSolved);
+  const toggleSolved = useSheetStore((s) => s.toggleSolved);
 
   const {
     setNodeRef,
@@ -21,36 +21,41 @@ export default function Question({ question, topicId, subTopicId }) {
         transition,
       }}
       className={`
-        flex items-center justify-between
+        flex items-center gap-3
         px-3 py-1.5 mt-1 rounded-md border text-sm
         ${question.solved
           ? "bg-green-900/30 border-green-600 text-green-300"
           : "bg-slate-800 border-slate-700 text-gray-200"}
       `}
     >
-      {/* LEFT SIDE */}
-      <div className="flex items-center gap-2">
-        {/* ✅ CHECKBOX (NOT DRAGGABLE) */}
-        <input
-          type="checkbox"
-          checked={question.solved}
-          onChange={() =>
-            toggleSolved(topicId, subTopicId, question.id)
-          }
-          className="accent-green-500 cursor-pointer"
-        />
+      {/* ✅ DRAG HANDLE */}
+      <span
+        {...attributes}
+        {...listeners}
+        className="cursor-grab text-slate-400 hover:text-slate-200 select-none"
+        title="Drag question"
+      >
+        ⠿
+      </span>
 
-        {/* ✅ DRAG HANDLE ONLY ON TEXT */}
-        <span
-          {...attributes}
-          {...listeners}
-          className={`cursor-grab select-none ${
-            question.solved ? "line-through opacity-70" : ""
-          }`}
-        >
-          {question.title}
-        </span>
-      </div>
+      {/* ✅ SOLVED CHECKBOX */}
+      <input
+        type="checkbox"
+        checked={question.solved}
+        onChange={() =>
+          toggleSolved(topicId, subTopicId, question.id)
+        }
+        className="accent-green-500 cursor-pointer"
+      />
+
+      {/* QUESTION TITLE */}
+      <span
+        className={`flex-1 ${
+          question.solved ? "line-through opacity-70" : ""
+        }`}
+      >
+        {question.title}
+      </span>
     </div>
   );
 }
